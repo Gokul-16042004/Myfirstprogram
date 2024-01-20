@@ -1,6 +1,6 @@
 public class Pattern {
     public static void main(String[] args) {
-        pattern7(5);
+        pattern9(4);
     }
     public static void pattern1(int n)
     {
@@ -126,6 +126,53 @@ public class Pattern {
                 else
                 {
                     System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void pattern8(int n)
+    {
+        for (int i = 1; i <= n; i++) {
+            int copy=i;
+            for (int j = 0; j <i; j++) {
+                if(j==0)
+                System.out.print(copy+" ");
+                else
+                {
+                    copy=copy+n-j;
+                    System.out.print(copy+" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void pattern9(int n)
+    {
+        int sum=0;
+for(int row=1;row<=n*2-1;row++)
+        {
+            for(int col=1;col<=n*2-1;col++)
+            {
+                if(col==n-(n-1)||row==n-(n-1)||col==n+(n-1)||row==n+(n-1))
+                {
+                    sum=n;
+                    System.out.print(n+" ");
+                }
+                else if(col==n-(n-2)||row==n-(n-2)||col==n+(n-2)||row==n+(n-2))
+                {
+                    sum=n-1;
+                    System.out.print(sum+" ");
+                }
+                else if(col==n-(n-1)||row==n-(n-1)||col==n+(n-1)||row==n+1)
+                {
+                    sum=n-2;
+                    System.out.print(sum+" ");
+                }
+                else if(row==col)
+                {
+                    sum=n-3;
+                    System.out.print(sum+" ");
                 }
             }
             System.out.println();
